@@ -1,0 +1,477 @@
+@font-face {
+  font-family: "oswaldregular";
+  src: url("/fonts/oswald-variablefont_wght-webfont.woff2") format("woff2"),
+    url("/fonts/oswald-variablefont_wght-webfont.woff") format("woff"),
+    url("/fonts/Oswald-VariableFont_wght.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: oswaldregular, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 7px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.4s;
+}
+a {
+  text-decoration: none;
+}
+body {
+  width: 100%;
+}
+
+#servicebox {
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.servicebox1,
+.servicebox2,
+.servicebox3 {
+  float: left;
+  width: 33%;
+}
+
+.box1 {
+  height: 3rem;
+  float: left;
+}
+.box2 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+.box3 {
+  float: right;
+  margin-top: 15px;
+  height: 3rem;
+  text-align: right;
+  cursor: pointer;
+  width: 50px;
+}
+
+.shop-btn {
+  padding-top: 5px;
+  width: 2rem;
+  height: 2rem;
+  float: right;
+}
+.title-logo {
+  width: 220px;
+  height: auto !important;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  visibility: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:  #595555;
+  display: block;
+  color: #FFFFFF;
+}
+
+.sidenav a:hover {
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 76px;
+  margin-left: -10px;
+  padding-top: 0px;
+  margin-top: -25px;
+}
+
+.carousel {
+  top: 20px;
+  position: relative;
+  height: 650px;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.carousel_images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel_track-container {
+  background-color: transparent;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel_track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
+}
+.carousel_slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel_button {
+  position: absolute;
+  bottom: 2.5rem;
+  background-color: transparent;
+  transform: translateY(100%);
+  border: 0;
+  z-index: 3;
+  cursor: pointer;
+  border-radius: 2px;
+  height: 25px;
+  width: 20px;
+}
+.carousel_button--left {
+  right: 3rem;
+}
+.carousel_button--right {
+  right: 1rem;
+}
+.button_images {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel_nav {
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  padding: 10px 0;
+  transform: translateY(-100%);
+}
+
+.carousel_indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 12px;
+  background: gray;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.carousel_indicator.current_slide {
+  background: skyblue;
+}
+
+.title-feature{
+  margin-top: 3vh;
+  font-family: oswaldregular,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size:26px;
+  width: 100%;
+  text-align: center;
+  color: #595555;
+}
+.whole-container {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin-left: -1vw;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+.flip-cards {
+  width: 20vw;
+  height: 20vw;
+  perspective: 10000px;
+  background-color: transparent;
+  margin-left: 2vw;
+margin-top: 2vw;
+/* object-fit: contain; */
+}
+.flip-cards-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+}
+.flip-cards:hover img {
+  filter:drop-shadow(8px 8px 12px black);
+transition: all .5s ease-in-out;
+
+}
+.flip-cards:hover a h2 {
+  color:#FFFFFF;
+  font-weight: 700;
+  text-shadow: 8px 8px 12px black;
+  font-size: 1.5vw;
+}
+.flip-cards img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.flip-cards-front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+ 
+}
+.flip-cards-front a{
+  top:35%;
+  left: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 65%;
+  text-decoration: none;
+  position: absolute;
+  text-align: center;
+}
+
+.flip-cards-front a h2 {
+  font-family:oswaldregular,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight:400;
+line-height:2.2vw;
+font-size: 1.3vw;  
+color: White;
+width: 100%;
+height: 100%;
+}
+.testimonial {
+  width: 100%;
+  text-align:center;
+  font-weight:  400;
+  color: #595555;
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+.our-products {
+  margin-top: 30px;
+  color: #595555;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+font-weight: 400;
+}
+.our-products2 {
+  font-family: muli,oswaldregular,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #595555;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.showcase-whole-container {
+width: 100%;
+height: 100%;
+justify-content: center;
+
+}
+.showcase-container {
+margin: 30vw 0 ;
+  position : relative;
+
+}
+.showcase {
+  height: 90vh ;
+width : 90vw ;
+margin-left: 2vw;
+  object-fit: contain;
+}
+.text-block-showcase {
+  width: 80vw;
+  position : absolute;
+  left: 10vw;
+  top: 60%;
+ justify-content: center;
+  background-color :rgb(250, 252, 253);
+  color: #595555;
+  padding-left: 5vw;
+  padding-right:2vw;
+  padding-bottom: 4vw;
+  margin-bottom:10vw;
+ box-shadow:  10px 10px 14px #0000003b;
+}
+
+.showcase-text {
+  margin-top :6vw;
+  font-size : 1.3rem;
+  font-weight: 400;
+  line-height: .5rem;
+}
+.showcase-para {
+  font-family: muli,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 2.5vw;
+  margin-bottom: 5vw;
+  line-height: 1.5rem;
+}
+.showcase-btn{
+  background-color :rgb(205, 238, 248);
+  position : absolute;
+  right: -2vw;
+  bottom: 1vw;
+  padding: 1.5vw 7vw;
+  border: transparent;
+  margin-bottom: 1vw;
+  cursor: pointer;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    position: relative;
+    height: 500px;
+    width: 98%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .title-feature{
+    font-size: 1.5rem;
+  }
+.flip-cards:hover a h2 {
+  font-size: 1.7rem;
+}
+  .flip-cards {
+    width: 80%;
+    height: 400px;
+  }
+  .flip-cards-front a h2{
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+  .box2 {
+    margin-top: 0px;
+    margin-left: -15px;
+  }
+  .box1 {
+    margin-top: -5px;
+    margin-left: 10px;
+  }
+  .box3 {
+    margin-top: 0px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .sidenav {
+    margin-left: 30px;
+
+    margin-bottom: -100px;
+    height: 100px;
+    width: 33%;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 46, 77, 0);
+    overflow-x: hidden;
+    transition: 0.5s;
+    justify-content: left;
+    padding-top: 20px;
+  }
+
+  .sidenav .closebtn {
+    position: relative;
+    top: 0;
+    right: 25px;
+    font-size: 0px;
+    margin-left: 50px;
+    visibility: hidden;
+  }
+
+  .sidenav a {
+    position: relative;
+    padding: 0px 0px 0px 14px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 15px;
+    color:  #595555;
+    float: left;
+  }
+  .box1 {
+    visibility: hidden;
+  }
+  .box3 {
+    margin-top: 25px;
+    margin-right: 25px;
+  }
+  .showcase-container {
+margin: 0 ;
+  position : relative;
+
+}
+  .text-block-showcase {
+  width: 40vw;
+  left: 50vw;
+  top: 45%;
+  padding-left: 2.5vw;
+  padding-right:2vw;
+  padding-bottom: 2vw;
+  margin-bottom:10vw;
+}
+
+.showcase {
+  height: auto;
+width : 60vw ;
+margin: 2vw;
+object-fit: contain;
+}
+ .showcase-text {
+  margin-top :2vw;
+  font-size : 1.3rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.showcase-btn {
+  margin:0;
+  padding: .7rem 2rem;
+  font-size : 1rem;
+  box-shadow:  9px 9px 14px #0000002a;
+}
+
+.showcase-para {
+  font-family: muli,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 0;
+  margin-bottom: 2vw;
+  line-height: 2rem;
+  margin-top: -1.5rem;
+}
+}
+.is-hidden {
+  display: none;
+}
